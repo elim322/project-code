@@ -52,7 +52,31 @@ class Home extends React.Component {
                 </div>
                 {this.props.children}
             </div>*/
-            <div>Hello</div>
+            <div class="grid-container">
+                <div class="signin-info">
+                    <img src="../assets/logo.png" class="logo"></img>
+                    <h1>Welcome to C.O.D.E.</h1>
+                    <p class="info-header">Program Information</p>
+                    <ul>
+                        <li>Recommended for ages 8 to 18</li>
+                        <li>Easy pairing with tutors</li>
+                        <li>Manage your booking online</li>
+                    </ul>
+                </div>
+                <div class="signin-card">
+                    <div class="card-punchhole"></div>
+                    <div>
+                        <label>Email</label><br></br>
+                        <input type="email"></input>
+                    </div>
+                    <div>
+                        <label>Password</label><br></br>
+                        <input type="password"></input>
+                    </div>
+                    <input type="submit" value="Sign In"></input>
+                </div>
+            </div>
+
         )
     }
 }
