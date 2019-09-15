@@ -42,12 +42,12 @@ class LearnerDetails extends React.Component {
               <div>
                 <label for="userEmail">Start of Session</label>
                 <br></br>
-                <input name="userEmail" id="userEmail" type="email"></input>
+                <input name="userEmail" id="userEmail" type="text"></input>
               </div>
               <div>
                 <label for="userPass">End of Session</label>
                 <br></br>
-                <input name="userPass" id="userPass" type="password"></input>
+                <input name="userPass" id="userPass" type="text"></input>
               </div>
               <div>
                 <label for="userPassConfirm">Location</label>
@@ -55,7 +55,7 @@ class LearnerDetails extends React.Component {
                 <input
                   name="userPassConfirm"
                   id="userPassConfirm"
-                  type="password"
+                  type="text"
                 ></input>
               </div>
               <div>
@@ -64,10 +64,10 @@ class LearnerDetails extends React.Component {
                 <input
                   name="userPassConfirm"
                   id="userPassConfirm"
-                  type="password"
+                  type="text"
                 ></input>
               </div>
-              <ul className="point">
+              <ul className="info">
                 <li>Contact your tutor for exact meeting location.</li>
               </ul>
             </section>

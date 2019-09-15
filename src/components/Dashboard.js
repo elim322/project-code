@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalendarParents from './Calendar/CalendarParents';
+import CalendarParents from './Calendar/CalendarVolunteers';
 // import CalendarVolunteers from './Calendar/CalendarVolunteers';
 
 class Dashboard extends Component {
