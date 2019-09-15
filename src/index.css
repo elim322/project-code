@@ -71,7 +71,7 @@ ul.point {
     padding: 0.5rem 0 0 30px;
     display: block; }
 
-input[type="email"], input[type="password"] {
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"], input[type="number"] {
   width: 100%;
   margin: 0.5rem 0 1rem 0;
   padding: 0.5rem 2rem; }
@@ -114,14 +114,26 @@ body {
   background-color: #eeeeee;
   padding-top: 1rem; }
 
-.btn-primary {
+.btn-primary, .btn-secondary {
+  display: inline-block;
   width: 100%;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none; }
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
+    cursor: pointer; }
+
+.btn-primary {
   background: #00AEEF;
   border: none;
-  padding: 1rem 2rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  color: white; }
+
+.btn-secondary {
+  background: white;
+  border: solid 1px #eeeeee;
+  color: black; }
 
 /* Sign in / Register */
 @media (min-width: 992px) {

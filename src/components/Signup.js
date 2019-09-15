@@ -73,42 +73,119 @@ class Signup extends React.Component {
                         </div>
                         <div className="namecard">
                             <div className="card-punchhole"></div>
+                            {/* User selected (independent) Learner */}
+                            <section className="card-content">
+                                <form action="" method="get" className="form-signup-sololearner">
+                                    <div id="soloLearner-part1"> 
+                                        <h2>Learner Info</h2>
+                                        <div>
+                                            <input id="imageUploadSoloLearner" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                            <label>A profile picture will help your teacher easily identify you.</label>
+                                        </div>
+                                        <div>
+                                            <label>Full Name</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <div>
+                                            <label>Email</label><br></br>
+                                            <input type="email"></input>
+                                        </div>
+                                        <div>
+                                            <label>Phone Number</label><br></br>
+                                            <input type="tel"></input>
+                                        </div>
+                                        <div>
+                                            <p>I prefer to be contacted via:</p>
+                                            <input type="checkbox" id="email" name="contactPref"></input>
+                                            <label for="email">Email</label>
+                                            <input type="checkbox" id="sms" name="contactPref"></input>
+                                            <label for="sms">SMS text</label>
+                                            <input type="checkbox" id="call" name="contactPref"></input>
+                                            <label for="call">Phone call</label>
+                                        </div>
+                                        <p><a href="" className="btn-primary" id="soloLearnerNext">Next</a></p>
+                                    </div>
+                                    <div id="soloLearner-part2">
+                                        <h2>Additional Info</h2>
+                                        <div>
+                                            <label>Age</label><br></br>
+                                            <input type="number"></input>
+                                        </div>
+                                        <div>
+                                            <label>Preferred Locations</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <div>
+                                            <label>Accessibility Accommodations</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <input className="btn-primary" type="submit" value="Start booking sessions"></input>
+                                    </div>
+                                </form>
+                            </section>
 
+                            <h3>idhfasdfhbwefbwaeuyfvhfaw</h3>
                             {/* User selected Parent! */}
                             <section className="card-content">
-                                <h2>Parent / Guardian Info</h2>
-                                <div>
-                                <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture></input>
-                                </div>
-                                <div>
-                                    <label>Full Name</label><br></br>
-                                    <input type="text"></input>
-                                </div>
-                                <div>
-                                    <label>Email</label><br></br>
-                                    <input type="email"></input>
-                                </div>
-                                <div>
-                                    <label>Phone Number</label><br></br>
-                                    <input type="tel"></input>
-                                </div>
-                                <div>
-                                    <p>I prefer to be contacted via:</p>
-                                    <input type="checkbox" id="email" name="contactPref"></input>
-                                    <label for="email">Email</label>
-                                    <input type="checkbox" id="sms" name="contactPref"></input>
-                                    <label for="sms">SMS text</label>
-                                    <input type="checkbox" id="call" name="contactPref"></input>
-                                    <label for="call">Phone call</label>
-                                </div>
-                                <p><a href="" className="btn-primary">Next</a></p>
-                                
+                                <form action="" method="get" className="form-signup-parent">
+                                    <div id="parent-part1">
+                                        <h2>Parent / Guardian Info</h2>
+                                        <div>
+                                            <input id="imageUploadParent" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                            <label>A profile picture will help your teacher easily identify you.</label>
+                                        </div>
+                                        <div>
+                                            <label>Full Name</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <div>
+                                            <label>Email</label><br></br>
+                                            <input type="email"></input>
+                                        </div>
+                                        <div>
+                                            <label>Phone Number</label><br></br>
+                                            <input type="tel"></input>
+                                        </div>
+                                        <div>
+                                            <p>I prefer to be contacted via:</p>
+                                            <input type="checkbox" id="email" name="contactPref"></input>
+                                            <label for="email">Email</label>
+                                            <input type="checkbox" id="sms" name="contactPref"></input>
+                                            <label for="sms">SMS text</label>
+                                            <input type="checkbox" id="call" name="contactPref"></input>
+                                            <label for="call">Phone call</label>
+                                        </div>
+                                        <p><a href="" className="btn-primary" id="parentNext">Next</a></p>
+                                    </div>
 
-
-                                
-                                <input className="btn-primary" type="submit" value="Create Account"></input>
-
-                                <p>By signing up you agree to our Terms of Use and Privacy Policy.</p>
+                                    {/* Parent's learner */}
+                                    {/* learner - add more and change id numbers */}
+                                    <div id="parent-learner-1">
+                                        <h2>Learner 1 Info</h2>
+                                        <div>
+                                            <input id="imageUploadLearner1" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                            <label>A profile picture will help your teacher easily identify you.</label>
+                                        </div>
+                                        <div>
+                                            <label>Full Name</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <div>
+                                            <label>Age</label><br></br>
+                                            <input type="number"></input>
+                                        </div>
+                                        <div>
+                                            <label>Preferred Locations</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <div>
+                                            <label>Accessibility Accommodations</label><br></br>
+                                            <input type="text"></input>
+                                        </div>
+                                        <p><a href="" className="btn-secondary" id="learnerAddAnother">Add another learner</a></p>
+                                        <input className="btn-primary" type="submit" value="Start booking sessions"></input>
+                                    </div>
+                                </form>
                             </section>
                         </div>
                     </div>

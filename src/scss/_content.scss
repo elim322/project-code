@@ -9,14 +9,30 @@ body {
 	
 }
 
-.btn-primary {
+.btn-primary, .btn-secondary {
+	display: inline-block;
 	width: 100%;
-	background: $color-primary;
-	border: none;
 	padding: 1rem 2rem;
-	color: white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+.btn-primary {
+	background: $color-primary;
+	border: none;
+	color: white;
+}
+
+.btn-secondary {
+	background: white;
+	border: solid 1px $color-smoke;
+	color: black;
 }
 
 /* Sign in / Register */
