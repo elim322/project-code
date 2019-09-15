@@ -12,46 +12,9 @@ class Home extends React.Component {
     }
 
     render() {
-        /*if (this.props.allPostsQuery.loading) {
-            return (
-                <div className='flex w-100 h-100 items-center justify-center pt7'>
-                    <div>
-                        Loading
-                        (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})
-                    </div>
-                </div>
-            )
-        }
-
-        let blurClass = ''
-        if (this.props.location.pathname !== '/') {
-            blurClass = ' blur'
-        }*/
 
         return (
-            /*<div className={'w-100 flex justify-center pa6' + blurClass}>
-                <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
-                    <Link
-                        to='/create'
-                        className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'
-                    >
-                        <img
-                            src={require('../assets/plus.svg')}
-                            alt=''
-                            className='plus mb3'
-                        />
-                        <div>New Post</div>
-                    </Link>
-                    {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
-                        <Post
-                            key={post.id}
-                            post={post}
-                            refresh={() => this.props.allPostsQuery.refetch()}
-                        />
-                    ))}
-                </div>
-                {this.props.children}
-            </div>*/
+
             <main>
                 <div className="signin">
                     <div className="grid-container">

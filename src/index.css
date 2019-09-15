@@ -1,12 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Arapey:400,400i|Montserrat:300,400,700&display=swap';
+@import url(~@fullcalendar/core/main.css);
+@import url(~@fullcalendar/timegrid/main.css);
+@import url(~@fullcalendar/daygrid/main.css);
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -52,7 +55,8 @@ body {
 h1 {
   font-weight: 500; }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: 300; }
 
 a {
@@ -66,7 +70,7 @@ ul.point {
   padding: 0;
   margin: 0; }
   ul.point li {
-    background: url("img/point.svg") no-repeat left top 0.5rem;
+    background: url("/img/point.svg") no-repeat left top 0.5rem;
     background-size: 20px;
     padding: 0.5rem 0 0 30px;
     display: block; }
