@@ -43,7 +43,9 @@ class Home extends React.Component {
                                         <label for="userPass">Password</label><br></br>
                                         <input name="userPass" id="userPass"type="password"></input>
                                     </div>
-                                    <input className="btn-primary" name="userSubmit" id="userSubmit" type="submit" value="Sign In"></input>
+                                    <Link className="link-minor" to={`/dashboard?v=true`}>
+                                        <input className="btn-primary" name="userSubmit" id="userSubmit" type="submit" value="Sign In"></input>
+                                    </Link>
 
                                     <p><Link className="link-minor" to={`/signup`}>Sign up with Email</Link></p>
                                 </section>
