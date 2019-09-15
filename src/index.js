@@ -31,7 +31,7 @@ ReactDOM.render(
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/profile-setup" component={ProfileSetup} />
         <Route exact path="/signup-volunteer" component={SignupVolunteer} />
-        <Route exact path="/calendar" component={Dashboard} />
+        <Route exact path="/dashboard" component={Dashboard} />
       </div>
     </Router>
   </ApolloProvider>,

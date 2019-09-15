@@ -44,6 +44,7 @@ export default class CalendarVolunteers extends React.Component {
             ref={this.calendarComponentRef}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
+            eventClick={(lol) => {console.log("yay "+lol.event.title)}}
           />
         </div>
       </div>
