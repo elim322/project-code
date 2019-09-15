@@ -19,7 +19,7 @@ class LearnerDetails extends React.Component {
 
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    this.subtitle.style.color = 'black';
   }
 
   closeModal() {
@@ -42,12 +42,22 @@ class LearnerDetails extends React.Component {
               <div>
                 <label for="userEmail">Start of Session</label>
                 <br></br>
-                <input name="userEmail" id="userEmail" type="text"></input>
+                <input
+                  name="userEmail"
+                  id="userEmail"
+                  type="text"
+                  value={this.props.info.start}
+                ></input>
               </div>
               <div>
                 <label for="userPass">End of Session</label>
                 <br></br>
-                <input name="userPass" id="userPass" type="text"></input>
+                <input
+                  name="userPass"
+                  id="userPass"
+                  type="text"
+                  value={this.props.info.end}
+                ></input>
               </div>
               <div>
                 <label for="userPassConfirm">Location</label>
@@ -56,6 +66,7 @@ class LearnerDetails extends React.Component {
                   name="userPassConfirm"
                   id="userPassConfirm"
                   type="text"
+                  value={this.props.info.title}
                 ></input>
               </div>
               <div>
@@ -65,6 +76,7 @@ class LearnerDetails extends React.Component {
                   name="userPassConfirm"
                   id="userPassConfirm"
                   type="text"
+                  value={this.props.info.volunteer}
                 ></input>
               </div>
               <ul className="info">

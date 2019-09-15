@@ -3,9 +3,10 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
+import LearnerDetails from '../Modal/LearnerDetailsModal';
 // import ModalComponent from './Modal';
 
-import '../scss/styles.scss';
+import '../../scss/styles.scss';
 
 export default class CalendarParents extends React.Component {
   calendarComponentRef = React.createRef();
@@ -14,13 +15,46 @@ export default class CalendarParents extends React.Component {
     calendarWeekends: true,
     calendarEvents: [
       // initial event data
-      { title: 'Event Now', start: new Date() },
+      {
+        title: 'Python',
+        start: Date.parse('16 Sep 2019 16:00:00 PDT'),
+        end: Date.parse('16 Sep 2019 17:00:00 PDT'),
+        volunteer: 'Timothy',
+      },
+      {
+        title: 'Scratch - Beginner',
+        start: Date.parse('15 Sep 2019 18:00:00 PDT'),
+        end: Date.parse('15 Sep 2019 20:00:00 PDT'),
+        volunteer: 'Timothy',
+      },
+      {
+        title: 'Scratch - Advanced',
+        start: Date.parse('19 Sep 2019 12:00:00 PDT'),
+        end: Date.parse('19 Sep 2019 13:00:00 PDT'),
+        volunteer: 'Timothy',
+      },
+      {
+        title: 'Python',
+        start: Date.parse('20 Sep 2019 09:00:00 PDT'),
+        end: Date.parse('16 Sep 2019 10:00:00 PDT'),
+        volunteer: 'Timothy',
+      },
     ],
+    title: '',
+    start: '',
+    end: '',
+    volunteer: '',
   };
 
-  // openModal = () => {
-  //   this.setState({ isModalOpen: true });
-  // };
+  openModal = info => {
+    this.setState({
+      isModalOpen: true,
+      title: info.event.title,
+      start: info.event.start,
+      end: info.event.end,
+      volunteer: info.event.volunteer,
+    });
+  };
 
   render() {
     return (
@@ -31,7 +65,7 @@ export default class CalendarParents extends React.Component {
         </div>
         <div className="demo-app-calendar">
           <FullCalendar
-            defaultView="dayGridWeek"
+            defaultView="timeGridWeek"
             header={{
               left: 'prev,next today',
               center: 'title',
@@ -41,7 +75,11 @@ export default class CalendarParents extends React.Component {
             ref={this.calendarComponentRef}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
+            eventClick={info => {
+              this.openModal(info);
+            }}
           />
+          {this.state.isModalOpen && <LearnerDetails info={this.state} />}
         </div>
       </div>
     );

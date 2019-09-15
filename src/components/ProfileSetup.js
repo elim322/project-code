@@ -117,7 +117,7 @@ class ProfileSetup extends React.Component {
                                             <label for="accAcc">Accessibility Accommodations</label><br></br>
                                             <input name="accAcc" id="accAcc" type="text" value="Autism"></input>
                                         </div>
-                                        <Link to={`/calendar`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
+                                        <Link to={`/dashboard`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
                                     </section>
                                 </div>
                             </form>
@@ -220,7 +220,7 @@ class ProfileSetup extends React.Component {
                                 <div className="namecard">
                                     <section className="card-content">    
                                         <p><a href="" className="btn-secondary" id="learnerAddAnother">Add another learner</a></p>
-                                        <Link to={`/calendar`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
+                                        <Link to={`/dashboard`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
                                     </section>
                                 </div>
                             </form>
