@@ -1,13 +1,156 @@
+@import 'https://fonts.googleapis.com/css?family=Arapey:400,400i|Montserrat:300,400,700&display=swap';
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Colors
+-------------------------------------------------- */
+/* Fonts
+-------------------------------------------------- */
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+h1 {
+  font-weight: 500; }
+
+h2, h3 {
+  font-weight: 300; }
+
+a {
+  color: #00AEEF; }
+  a.link-minor {
+    color: black;
+    font-weight: 300; }
+
+ul.point {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  ul.point li {
+    background: url("img/point.svg") no-repeat left top 0.5rem;
+    background-size: 20px;
+    padding: 0.5rem 0 0 30px;
+    display: block; }
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5rem 2rem; }
+
+label {
+  font-weight: 300; }
+
+.signin {
+  margin: 0 1rem; }
+  @media (min-width: 992px) {
+    .signin {
+      margin: 0 auto;
+      max-width: 1024px; } }
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  grid-gap: 1rem; }
+  @media (min-width: 992px) {
+    .grid-container {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr; } }
+
+.signin-info, .namecard {
+  margin-bottom: 2rem; }
+
+.card-content {
+  margin: 1rem; }
+
+/* Body
+-------------------------------------------------- */
+body {
+  background-color: #eeeeee;
+  padding-top: 1rem; }
+
+.btn-primary {
+  width: 100%;
+  background: #00AEEF;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/* Sign in / Register */
+.signin-info .logo {
+  text-align: center; }
+  .signin-info .logo img {
+    height: 6rem; }
+
+.signin-info h1 {
+  text-align: center; }
+
+.signin-info .signin-content {
+  margin: 0 4rem; }
+  .signin-info .signin-content ul {
+    margin-left: 2rem; }
+
+.namecard {
+  background: white;
+  -webkit-box-shadow: 0 3px 6px 1px #b8b8b8;
+  box-shadow: 0 3px 6px 1px #b8b8b8; }
+
+.card-content h2 {
+  text-align: center; }
+
+.card-content p {
+  text-align: center; }
+
+.card-punchhole {
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem auto;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 3px 6px 1px #b8b8b8;
+  box-shadow: inset 0 3px 6px 1px #b8b8b8; }
+
+/* Dashboard */

@@ -1,0 +1,30 @@
+.signin {
+    margin: 0 1rem;
+    @include lg {
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+
+    @include lg {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.signin-info, .namecard {
+    margin-bottom: 2rem;
+    // @extend .grid-box-half;
+
+	@include lg {
+	}
+}
+
+.card-content {
+    margin: 1rem;
+}
