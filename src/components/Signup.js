@@ -30,7 +30,7 @@ class Signup extends React.Component {
                             </div>
                         </div>
                         {/* User selected (independent) Learner */}
-                        <form action="" method="get" className="form-signin">
+                        <form action="" method="get" id="form-signup">
                             <div className="namecard">
                                 <div className="card-punchhole"></div>
                                 <section className="card-content">

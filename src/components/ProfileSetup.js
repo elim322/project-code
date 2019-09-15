@@ -61,9 +61,16 @@ class ProfileSetup extends React.Component {
                                     <div className="card-punchhole"></div>
                                     <section className="card-content">
                                         <h2>Learner Info</h2>
-                                        <div>
+                                        <div className="form-pic-name">
+                                            <div className="profile-circle">
+                                                <img className="profile-pic" src=""></img>
+                                            </div>
                                             <input id="imageUploadSoloLearner" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
-                                            <label>A profile picture will help your teacher easily identify you.</label>
+                                            <div className="profile-name">
+                                                <label>Full Name</label><br></br>
+                                                <input type="text"></input><br></br>
+                                                <span class="text-minor">A profile picture will help your students easily identify you.</span>
+                                            </div>
                                         </div>
                                         <div>
                                             <label>Full Name</label><br></br>
@@ -86,6 +93,7 @@ class ProfileSetup extends React.Component {
                                             <input type="checkbox" id="call" name="contactPref"></input>
                                             <label for="call">Phone call</label>
                                         </div>
+                                        <hr></hr>
                                         <h2>Additional Info</h2>
                                         <div>
                                             <label>Age</label><br></br>
@@ -131,19 +139,21 @@ class ProfileSetup extends React.Component {
                                     <label for="userTypeLearner">Learner</label>
                                 </div>
                             </div>
-                            {/* User selected (independent) Learner */}
-                            <form action="" method="get" id="form-signup-sololearner">
+                            <form action="" method="get" id="form-signup-parent">
                                 <div className="namecard">
                                     <div className="card-punchhole"></div>
                                     <section className="card-content">                                        
                                         <h2>Parent / Guardian Info</h2>
-                                        <div>
+                                        <div className="form-pic-name">
+                                            <div className="profile-circle">
+                                                <img className="profile-pic" src=""></img>
+                                            </div>
                                             <input id="imageUploadParent" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
-                                            <label>A profile picture will help your teacher easily identify you.</label>
-                                        </div>
-                                        <div>
-                                            <label>Full Name</label><br></br>
-                                            <input type="text"></input>
+                                            <div className="profile-name">
+                                                <label>Full Name</label><br></br>
+                                                <input type="text"></input><br></br>
+                                                <span class="text-minor">A profile picture will help your students easily identify you.</span>
+                                            </div>
                                         </div>
                                         <div>
                                             <label>Email</label><br></br>
@@ -171,13 +181,16 @@ class ProfileSetup extends React.Component {
                                     <section className="card-content">    
                                         <div id="parent-learner1">
                                             <h2>Learner 1 Info</h2>
-                                            <div>
+                                            <div className="form-pic-name">
+                                                <div className="profile-circle">
+                                                    <img className="profile-pic" src=""></img>
+                                                </div>
                                                 <input id="imageUploadLearner1" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
-                                                <label>A profile picture will help your teacher easily identify you.</label>
-                                            </div>
-                                            <div>
-                                                <label>Full Name</label><br></br>
-                                                <input type="text"></input>
+                                                <div className="profile-name">
+                                                    <label>Full Name</label><br></br>
+                                                    <input type="text"></input><br></br>
+                                                    <span class="text-minor">A profile picture will help your students easily identify you.</span>
+                                                </div>
                                             </div>
                                             <div>
                                                 <label>Age</label><br></br>

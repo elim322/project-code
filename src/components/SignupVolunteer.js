@@ -30,18 +30,21 @@ class SignupVolunteer extends React.Component {
                             </div>
                         </div>
                         {/* User selected (independent) Learner */}
-                        <form action="" method="get" className="form-signup-volunteer">
+                        <form action="" method="get" id="form-signup-volunteer">
                             <div className="namecard">
                                 <div className="card-punchhole"></div>
                                 <section className="card-content">
                                     <h2>Volunteer Info</h2>
-                                    <div>
-                                        <input id="imageUploadVolunteer" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
-                                        <label>A profile picture will help your students easily identify you.</label>
-                                    </div>
-                                    <div>
-                                        <label>Full Name</label><br></br>
-                                        <input type="text"></input>
+                                    <div className="form-pic-name">
+                                        <div className="profile-circle">
+                                            <img className="profile-pic" src=""></img>
+                                        </div>
+                                        <input id="imageUploadVolunteer" type="file" name="profile_photo" placeholder="Photo" capture></input>
+                                        <div className="profile-name">
+                                            <label>Full Name</label><br></br>
+                                            <input type="text"></input><br></br>
+                                            <span class="text-minor">A profile picture will help your students easily identify you.</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <label>Email</label><br></br>
@@ -55,6 +58,7 @@ class SignupVolunteer extends React.Component {
                                         <label>Confirm Password</label><br></br>
                                         <input type="password"></input>
                                     </div>
+                                    <hr></hr>
                                     <h2>Additional Info</h2>
                                     <div>
                                         <label>Phone Number</label><br></br>
@@ -73,6 +77,7 @@ class SignupVolunteer extends React.Component {
                                         <input type="checkbox" id="call" name="contactPref"></input>
                                         <label for="call">Phone call</label>
                                     </div>
+                                    
                                     <div>
                                         <label>Preferred Locations</label><br></br>
                                         <input type="text"></input>

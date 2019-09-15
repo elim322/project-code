@@ -30,10 +30,10 @@ class Home extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="namecard">
-                            <div className="card-punchhole"></div>
-                            <section className="card-content">
-                                <form action="" method="get" className="form-signin">
+                        <form action="" method="get" id="form-signin">
+                            <div className="namecard">
+                                <div className="card-punchhole"></div>
+                                <section className="card-content">
                                     <h2>Sign in</h2>
                                     <div>
                                         <label>Email</label><br></br>
@@ -46,9 +46,9 @@ class Home extends React.Component {
                                     <input className="btn-primary" type="submit" value="Sign In"></input>
 
                                     <p><a className="link-minor" href="#">Sign up with Email</a></p>
-                                </form>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </main>

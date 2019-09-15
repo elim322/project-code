@@ -70,7 +70,7 @@ ul.point {
   padding: 0;
   margin: 0; }
   ul.point li {
-    background: url("/img/point.svg") no-repeat left top 0.5rem;
+    background: url("./../img/point.svg") no-repeat left top 0.5rem;
     background-size: 20px;
     padding: 0.5rem 0 0 30px;
     display: block; }
@@ -98,16 +98,23 @@ label {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   grid-gap: 1rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start; }
   @media (min-width: 992px) {
     .grid-container {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr; } }
 
-.signin-info, .namecard {
-  margin-bottom: 2rem; }
+.signin-info, #form-signin, #form-signup, #form-signup-volunteer, #form-signup-sololearner, #form-signup-parent {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem; }
+
+@media (min-width: 992px) {
+  #form-signin, #form-signup, #form-signup-volunteer, #form-signup-sololearner, #form-signup-parent {
+    -ms-grid-column: 2;
+    grid-column-start: 2; } }
 
 .card-content {
   margin: 1rem; }

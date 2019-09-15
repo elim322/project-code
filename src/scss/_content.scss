@@ -5,8 +5,9 @@ body {
 	padding-top: 1rem;
 }
 
-.logo {
-	
+hr {
+	margin: 2rem 0;
+	border: solid 1px $color-smoke;
 }
 
 .btn-primary, .btn-secondary {
@@ -37,7 +38,7 @@ body {
 
 /* Sign in / Register */
 
-.signin-info, .namecard {
+.signin-info, #form-signin, #form-signup, #form-signup-volunteer, #form-signup-sololearner, #form-signup-parent {
 	@include lg {
 		margin-top: 10rem;
 	}
@@ -68,6 +69,7 @@ body {
 .namecard {
 	background: white;
 	box-shadow: 0 3px 6px 1px $color-gray;
+	margin: 1rem 0;
 	
 	.card-content {
 		h2 {
@@ -90,6 +92,7 @@ body {
 	height: 1.5rem;
 	margin: 2rem auto;
 	border-radius: 50%;
+	background: $color-smoke;
 	box-shadow: inset 0 3px 6px 1px $color-gray;
 }
 
@@ -117,6 +120,42 @@ body {
 		font-weight: 500;
 		cursor: pointer;
 	}	
+}
+
+.form-pic-name {
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: auto;
+	grid-gap: 1rem;
+	align-items: start;
+
+	margin-bottom: 1rem;
+}
+.profile-name {
+	grid-row-start: 1;
+	grid-column-start: 2;
+}
+.profile-circle {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	// display: inline-block;
+	// position: relative;
+	// top: -2.5rem;
+	width: 7rem;
+	height: 7rem;
+	background: $color-smoke;
+	border-radius: 50%;
+}
+input[id^="imageUpload"] {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	// margin-left: -7rem;
+	// margin-right: 1rem;
+	width: 7rem;
+	height: 7rem;
+	opacity: 0;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 /* Dashboard */

@@ -11,20 +11,30 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
-    align-items: center;
+    align-items: start;
 
     @include lg {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-.signin-info, .namecard {
-    margin-bottom: 2rem;
-    // @extend .grid-box-half;
-
-	@include lg {
-	}
+.signin-info, #form-signin, #form-signup, #form-signup-volunteer, #form-signup-sololearner, #form-signup-parent {
+    display: grid;
+    margin: 2rem 0;
 }
+
+.signin-info {
+    @include lg {
+        position: sticky;
+        top:6rem;;
+    }
+}
+
+// #form-signin, #form-signup, #form-signup-volunteer, #form-signup-sololearner, #form-signup-parent {
+//     @include lg {
+//         grid-column-start: 2;
+//     }
+// }
 
 .card-content {
     margin: 1rem;

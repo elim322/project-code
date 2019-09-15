@@ -24,13 +24,18 @@ a {
   }
 }
 
+.text-minor {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
 ul.point {
   list-style-type: none;
   padding: 0;
   margin: 0;
 
   li {
-    background: url('/img/point.svg') no-repeat left top 0.5rem;
+    background: url('./../img/point.svg') no-repeat left top 0.5rem;
     background-size: 20px;
     padding: 0.5rem 0 0 30px;
     display: block;
@@ -40,6 +45,15 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 	width: 100%;
 	margin: 0.5rem 0 1rem 0;
 	padding: 0.5rem 2rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+  
+  & + label {
+    margin-right: 2rem;
+  }
 }
 
 label {
