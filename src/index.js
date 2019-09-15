@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Home from './components/Home'
 import Signup from './components/Signup'
+import SignupVolunteer from './components/SignupVolunteer'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
@@ -24,6 +25,7 @@ ReactDOM.render(
             <div>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/signup' component={Signup} />
+                <Route exact path='/signup-volunteer' component={SignupVolunteer} />
             </div>
         </Router>
     </ApolloProvider>,

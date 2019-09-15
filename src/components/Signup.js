@@ -106,7 +106,7 @@ class Signup extends React.Component {
                                         <p><a href="" className="btn-primary" id="soloLearnerNext">Next</a></p>
                                     </div>
                                     <div id="soloLearner-part2">
-                                        <h2>Additional Information</h2>
+                                        <h2>Additional Info</h2>
                                         <div>
                                             <label>Age</label><br></br>
                                             <input type="number"></input>
