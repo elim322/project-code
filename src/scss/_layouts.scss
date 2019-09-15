@@ -11,6 +11,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
+    align-items: center;
 
     @include lg {
         grid-template-columns: 1fr 1fr;

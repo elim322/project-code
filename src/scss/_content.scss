@@ -21,6 +21,12 @@ body {
 
 /* Sign in / Register */
 
+.signin-info, .namecard {
+	@include lg {
+		margin-top: 10rem;
+	}
+}
+
 .signin-info {
 	.logo {
 		text-align: center;
@@ -46,22 +52,27 @@ body {
 .namecard {
 	background: white;
 	box-shadow: 0 3px 6px 1px $color-gray;
-}
+	
+	.card-content {
+		h2 {
+			text-align: center;
+		}
 
-.card-content {
-	h2 {
-		text-align: center;
-	}
+		p {
+			text-align: center;
+		}
 
-	p {
-		text-align: center;
+		@include lg {
+			margin: 0 auto;
+			max-width: 20rem;
+		}
 	}
 }
 
 .card-punchhole {
-	width: 1rem;
-	height: 1rem;
-	margin: 1rem auto;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 2rem auto;
 	border-radius: 50%;
 	box-shadow: inset 0 3px 6px 1px $color-gray;
 }
