@@ -29,11 +29,11 @@ class Signup extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="namecard">
-                            <div className="card-punchhole"></div>
-                            {/* User selected (independent) Learner */}
-                            <section className="card-content">
-                                <form action="" method="get" className="form-signin">
+                        {/* User selected (independent) Learner */}
+                        <form action="" method="get" className="form-signin">
+                            <div className="namecard">
+                                <div className="card-punchhole"></div>
+                                <section className="card-content">
                                     <h2>Sign up</h2>
                                     <div>
                                         <label>Email</label><br></br>
@@ -48,9 +48,9 @@ class Signup extends React.Component {
                                         <input type="password"></input>
                                     </div>
                                     <input className="btn-primary" type="submit" value="Create Account"></input>
-                                </form>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </main>
