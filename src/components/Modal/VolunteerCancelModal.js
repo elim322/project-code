@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-class ModalComponent extends React.Component {
+class VolunteerCancel extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -52,4 +52,4 @@ class ModalComponent extends React.Component {
   }
 }
 
-export default ModalComponent;
+export default VolunteerCancel;

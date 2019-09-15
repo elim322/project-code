@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-class ModalComponent extends React.Component {
+class LearnerDetails extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -36,15 +36,41 @@ class ModalComponent extends React.Component {
           onRequestClose={this.closeModal}
           contentLabel="Example Modal"
         >
-          <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
+          <h2 ref={subtitle => (this.subtitle = subtitle)}>Slot Details</h2>
           <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+            <section className="card-content">
+              <div>
+                <label for="userEmail">Start of Session</label>
+                <br></br>
+                <input name="userEmail" id="userEmail" type="email"></input>
+              </div>
+              <div>
+                <label for="userPass">End of Session</label>
+                <br></br>
+                <input name="userPass" id="userPass" type="password"></input>
+              </div>
+              <div>
+                <label for="userPassConfirm">Location</label>
+                <br></br>
+                <input
+                  name="userPassConfirm"
+                  id="userPassConfirm"
+                  type="password"
+                ></input>
+              </div>
+              <div>
+                <label for="userPassConfirm">Contact</label>
+                <br></br>
+                <input
+                  name="userPassConfirm"
+                  id="userPassConfirm"
+                  type="password"
+                ></input>
+              </div>
+              <ul className="point">
+                <li>Contact your tutor for exact meeting location.</li>
+              </ul>
+            </section>
           </form>
         </Modal>
       </div>
@@ -52,4 +78,4 @@ class ModalComponent extends React.Component {
   }
 }
 
-export default ModalComponent;
+export default LearnerDetails;

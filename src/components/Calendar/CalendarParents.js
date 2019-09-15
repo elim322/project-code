@@ -3,7 +3,7 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
-import ModalComponent from '../Modal/LearnerCancelModal';
+import LearnerDetails from '../Modal/LearnerDetailsModal';
 
 import '../../scss/styles.scss';
 
@@ -30,7 +30,7 @@ export default class CalendarParents extends React.Component {
             Schedule
           </button>
         </div>
-        {this.state.isModalOpen && <ModalComponent />}
+        {this.state.isModalOpen && <LearnerDetails />}
         <div>
           <FullCalendar
             className="calendar"
