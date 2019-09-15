@@ -1,57 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
 class Home extends React.Component {
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.location.key !== nextProps.location.key) {
-            this.props.allPostsQuery.refetch()
-        }
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: '',
+            type: ''
+        };
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handlePwChange = this.handlePwChange.bind(this);
+        this.handleSignIn = this.handleSignIn.bind(this);
     }
 
+    handleEmailChange(event) {
+        this.setState({email: event.target.value});
+    }
+
+    handlePwChange(event) {
+        this.setState({password: event.target.value});
+    }
+
+    handleSignIn = async () => {
+        const {email, password, type} = this.state;
+        await this.props.signInQuery({variables: {email, password, type}});
+        this.props.history.replace('/');
+    };
+
     render() {
-        /*if (this.props.allPostsQuery.loading) {
-            return (
-                <div className='flex w-100 h-100 items-center justify-center pt7'>
-                    <div>
-                        Loading
-                        (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})
-                    </div>
-                </div>
-            )
-        }
-
-        let blurClass = ''
-        if (this.props.location.pathname !== '/') {
-            blurClass = ' blur'
-        }*/
-
         return (
-            /*<div className={'w-100 flex justify-center pa6' + blurClass}>
-                <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
-                    <Link
-                        to='/create'
-                        className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'
-                    >
-                        <img
-                            src={require('../assets/plus.svg')}
-                            alt=''
-                            className='plus mb3'
-                        />
-                        <div>New Post</div>
-                    </Link>
-                    {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
-                        <Post
-                            key={post.id}
-                            post={post}
-                            refresh={() => this.props.allPostsQuery.refetch()}
-                        />
-                    ))}
-                </div>
-                {this.props.children}
-            </div>*/
             <main>
                 <div className="signin">
                     <div className="grid-container">
@@ -74,15 +54,15 @@ class Home extends React.Component {
                                 
                                 <div>
                                     <label>Email</label><br></br>
-                                    <input type="email"></input>
+                                    <input type="email" value={this.state.email} onChange={this.handleEmailChange}></input>
                                 </div>
                                 <div>
                                     <label>Password</label><br></br>
-                                    <input type="password"></input>
+                                    <input type="password" value={this.state.password} onChange={this.handlePwChange}></input>
                                 </div>
-                                <input className="btn-primary" type="submit" value="Sign In"></input>
+                                <input className="btn-primary" type="submit" onClick={this.handleSignIn} value="Sign In"></input>
 
-                                <p><a className="link-minor" href="#">Sign up with Email</a></p>
+                                <p><a className="link-minor" href="/signup">Sign up with Email</a></p>
                             </section>
                         </div>
                     </div>
@@ -92,21 +72,13 @@ class Home extends React.Component {
     }
 }
 
-const ALL_POSTS_QUERY = gql`
-  query AllPostsQuery {
-    allPosts(orderBy: createdAt_DESC) {
-      id
-      imageUrl
-      description
-    }
+const SIGN_IN_QUERY = gql`
+  mutation ($email: String!, $password: String!, $type: String!) {
+      createUser(email: $email, password: $password, type: $type) {
+        id
+      }
   }
 `;
 
-const HomeWithQuery = graphql(ALL_POSTS_QUERY, {
-    name: 'allPostsQuery',
-    options: {
-        fetchPolicy: 'network-only',
-    },
-})(Home);
-
+const HomeWithQuery = graphql(SIGN_IN_QUERY, {name: 'signInQuery'})(Home);
 export default HomeWithQuery
