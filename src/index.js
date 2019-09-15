@@ -15,7 +15,7 @@ import './scss/styles.scss';
 
 // __SIMPLE_API_ENDPOINT__ looks like: 'https://api.graph.cool/simple/v1/__SERVICE_ID__'
 const httpLink = new HttpLink({
-  uri: 'https://api.graph.cool/simple/v1/ck0k2p72i0d750102p3hqsxyy',
+  uri: 'https://api.graph.cool/simple/v1/PROJECT_ID',
 });
 
 const client = new ApolloClient({
