@@ -72,17 +72,15 @@ hr {
 	margin: 1rem 0;
 	
 	.card-content {
-		h2 {
-			text-align: center;
-		}
+		margin: 1rem;
 
-		p {
+		h2, p {
 			text-align: center;
 		}
 
 		@include lg {
-			margin: 0 auto;
-			max-width: 20rem;
+			margin: 0 auto 1rem;
+			max-width: 24rem;
 		}
 	}
 }

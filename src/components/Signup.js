@@ -36,18 +36,18 @@ class Signup extends React.Component {
                                 <section className="card-content">
                                     <h2>Sign up</h2>
                                     <div>
-                                        <label>Email</label><br></br>
-                                        <input type="email"></input>
+                                        <label for="userEmail">Email</label><br></br>
+                                        <input name="userEmail" id="userEmail" type="email"></input>
                                     </div>
                                     <div>
-                                        <label>Password</label><br></br>
-                                        <input type="password"></input>
+                                        <label for="userPass">Password</label><br></br>
+                                        <input name="userPass" id="userPass" type="password"></input>
                                     </div>
                                     <div>
-                                        <label>Confirm Password</label><br></br>
-                                        <input type="password"></input>
+                                        <label for="userPassConfirm">Confirm Password</label><br></br>
+                                        <input name="userPassConfirm" id="userPassConfirm" type="password"></input>
                                     </div>
-                                    <input className="btn-primary" type="submit" value="Create Account"></input>
+                                    <Link to={`/profile-setup`}><input className="btn-primary" type="submit" value="Create Account"></input></Link>
                                 </section>
                             </div>
                         </form>

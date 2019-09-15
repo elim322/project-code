@@ -36,16 +36,16 @@ class Home extends React.Component {
                                 <section className="card-content">
                                     <h2>Sign in</h2>
                                     <div>
-                                        <label>Email</label><br></br>
-                                        <input type="email"></input>
+                                        <label for="userEmail">Email</label><br></br>
+                                        <input name="userEmail" id="userEmail" type="email"></input>
                                     </div>
                                     <div>
-                                        <label>Password</label><br></br>
-                                        <input type="password"></input>
+                                        <label for="userPass">Password</label><br></br>
+                                        <input name="userPass" id="userPass"type="password"></input>
                                     </div>
-                                    <input className="btn-primary" type="submit" value="Sign In"></input>
+                                    <input className="btn-primary" name="userSubmit" id="userSubmit" type="submit" value="Sign In"></input>
 
-                                    <p><a className="link-minor" href="#">Sign up with Email</a></p>
+                                    <p><Link className="link-minor" to={`/signup`}>Sign up with Email</Link></p>
                                 </section>
                             </div>
                         </form>

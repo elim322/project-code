@@ -65,24 +65,20 @@ class ProfileSetup extends React.Component {
                                             <div className="profile-circle">
                                                 <img className="profile-pic" src=""></img>
                                             </div>
-                                            <input id="imageUploadSoloLearner" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                            <input id="imageUploadSoloLearner" type="file" name="imageUploadSoloLearner" placeholder="Photo" capture></input>
                                             <div className="profile-name">
-                                                <label>Full Name</label><br></br>
-                                                <input type="text"></input><br></br>
+                                                <label for="userName">Full Name</label><br></br>
+                                                <input name="userName" id="userName" type="text"></input><br></br>
                                                 <span class="text-minor">A profile picture will help your students easily identify you.</span>
                                             </div>
                                         </div>
                                         <div>
-                                            <label>Full Name</label><br></br>
-                                            <input type="text"></input>
+                                            <label for="userEmail">Email</label><br></br>
+                                            <input name="userEmail" id="userEmail" type="email"></input>
                                         </div>
                                         <div>
-                                            <label>Email</label><br></br>
-                                            <input type="email"></input>
-                                        </div>
-                                        <div>
-                                            <label>Phone Number</label><br></br>
-                                            <input type="tel"></input>
+                                            <label for="userTel">Phone Number</label><br></br>
+                                            <input name="userTel" id="userTel" type="tel"></input>
                                         </div>
                                         <div>
                                             <p>I prefer to be contacted via:</p>
@@ -96,18 +92,18 @@ class ProfileSetup extends React.Component {
                                         <hr></hr>
                                         <h2>Additional Info</h2>
                                         <div>
-                                            <label>Age</label><br></br>
-                                            <input type="number"></input>
+                                            <label for="userAge">Age</label><br></br>
+                                            <input name="userAge" id="userAge" type="number"></input>
                                         </div>
                                         <div>
-                                            <label>Preferred Locations</label><br></br>
-                                            <input type="text"></input>
+                                            <label for="locationPref">Preferred Locations</label><br></br>
+                                            <input name="locationPref" id="locationPref" type="text"></input>
                                         </div>
                                         <div>
-                                            <label>Accessibility Accommodations</label><br></br>
-                                            <input type="text"></input>
+                                            <label for="accAcc">Accessibility Accommodations</label><br></br>
+                                            <input name="accAcc" id="accAcc" type="text"></input>
                                         </div>
-                                        <input className="btn-primary" type="submit" value="Start booking sessions"></input>
+                                        <Link to={`/calendar`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
                                     </section>
                                 </div>
                             </form>
@@ -148,28 +144,28 @@ class ProfileSetup extends React.Component {
                                             <div className="profile-circle">
                                                 <img className="profile-pic" src=""></img>
                                             </div>
-                                            <input id="imageUploadParent" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                            <input id="imageUploadParent" type="file" name="imageUploadParent" placeholder="Photo" capture></input>
                                             <div className="profile-name">
-                                                <label>Full Name</label><br></br>
-                                                <input type="text"></input><br></br>
+                                                <label for="parentName">Full Name</label><br></br>
+                                                <input name="parentName" id="parentName" type="text"></input><br></br>
                                                 <span class="text-minor">A profile picture will help your students easily identify you.</span>
                                             </div>
                                         </div>
                                         <div>
-                                            <label>Email</label><br></br>
-                                            <input type="email"></input>
+                                            <label for="parentEmail">Email</label><br></br>
+                                            <input name="parentEmail" id="parentEmail" type="email"></input>
                                         </div>
                                         <div>
-                                            <label>Phone Number</label><br></br>
-                                            <input type="tel"></input>
+                                            <label for="parentTel">Phone Number</label><br></br>
+                                            <input name="parentTel" id="parentTel" type="tel"></input>
                                         </div>
                                         <div>
                                             <p>I prefer to be contacted via:</p>
-                                            <input type="checkbox" id="email" name="contactPref"></input>
+                                            <input type="checkbox" id="email" name="parentContactPref"></input>
                                             <label for="email">Email</label>
-                                            <input type="checkbox" id="sms" name="contactPref"></input>
+                                            <input type="checkbox" id="sms" name="parentContactPref"></input>
                                             <label for="sms">SMS text</label>
-                                            <input type="checkbox" id="call" name="contactPref"></input>
+                                            <input type="checkbox" id="call" name="parentContactPref"></input>
                                             <label for="call">Phone call</label>
                                         </div>
                                     </section>
@@ -185,24 +181,24 @@ class ProfileSetup extends React.Component {
                                                 <div className="profile-circle">
                                                     <img className="profile-pic" src=""></img>
                                                 </div>
-                                                <input id="imageUploadLearner1" type="file" name="profile_photo" placeholder="Photo" capture></input><br></br>
+                                                <input id="imageUploadLearner1" type="file" name="imageUploadLearner1" placeholder="Photo" capture></input>
                                                 <div className="profile-name">
-                                                    <label>Full Name</label><br></br>
-                                                    <input type="text"></input><br></br>
+                                                <label for="learner1Name">Full Name</label><br></br>
+                                                    <input name="learner1Name" id="learner1Name" type="text"></input><br></br>
                                                     <span class="text-minor">A profile picture will help your students easily identify you.</span>
                                                 </div>
                                             </div>
                                             <div>
-                                                <label>Age</label><br></br>
-                                                <input type="number"></input>
+                                                <label for="learner1Age">Age</label><br></br>
+                                                <input name="learner1Age" id="learner1Age" type="number"></input>
                                             </div>
                                             <div>
-                                                <label>Preferred Locations</label><br></br>
-                                                <input type="text"></input>
+                                                <label for="learner1LocationPref">Preferred Locations</label><br></br>
+                                                <input name="learner1LocationPref" id="learner1LocationPref" type="text"></input>
                                             </div>
                                             <div>
-                                                <label>Accessibility Accommodations</label><br></br>
-                                                <input type="text"></input>
+                                                <label for="learner1AccAcc">Accessibility Accommodations</label><br></br>
+                                                <input name="learner1AccAcc" id="learner1AccAcc" type="text"></input>
                                             </div>
                                         </div>
                                     </section>
@@ -210,7 +206,7 @@ class ProfileSetup extends React.Component {
                                 <div className="namecard">
                                     <section className="card-content">    
                                         <p><a href="" className="btn-secondary" id="learnerAddAnother">Add another learner</a></p>
-                                        <input className="btn-primary" type="submit" value="Start booking sessions"></input>
+                                        <Link to={`/calendar`}><input className="btn-primary" type="submit" value="Start booking sessions"></input></Link>
                                     </section>
                                 </div>
                             </form>
