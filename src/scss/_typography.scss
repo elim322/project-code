@@ -2,48 +2,48 @@
 -------------------------------------------------- */
 @import 'https://fonts.googleapis.com/css?family=Arapey:400,400i|Montserrat:300,400,700&display=swap';
 body {
-	// font-family: 'Arapey', serif;
-	font-family: 'Montserrat', sans-serif;
+  // font-family: 'Arapey', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	font-weight: 500;
+  font-weight: 500;
 }
 
-h2, h3 {
-	font-weight: 300;
+h2,
+h3 {
+  font-weight: 300;
 }
 
 a {
-	color: $color-primary;
+  color: $color-primary;
 
-	&.link-minor {
-		color: black;
-		font-weight: 300;
-	}
+  &.link-minor {
+    color: black;
+    font-weight: 300;
+  }
 }
-
 
 ul.point {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 
-	li {
-		background: url('img/point.svg') no-repeat left top 0.5rem;
-		background-size: 20px;
-		padding: 0.5rem 0 0 30px;
-		display: block;
-	}
+  li {
+    background: url('../img/point.svg') no-repeat left top 0.5rem;
+    background-size: 20px;
+    padding: 0.5rem 0 0 30px;
+    display: block;
+  }
 }
 
-input[type="email"], input[type="password"] {
-	width: 100%;
-	margin: 0.5rem 0 1rem 0;
-	padding: 0.5rem 2rem;
-
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5rem 2rem;
 }
 
 label {
-	font-weight: 300;
+  font-weight: 300;
 }
