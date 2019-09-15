@@ -3,17 +3,23 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
+import ModalComponent from './Modal';
 
 import '../scss/styles.scss';
 
 export default class Calendar extends React.Component {
   calendarComponentRef = React.createRef();
   state = {
+    isModalOpen: false,
     calendarWeekends: true,
     calendarEvents: [
       // initial event data
       { title: 'Event Now', start: new Date() },
     ],
+  };
+
+  openModal = () => {
+    this.setState({ isModalOpen: true });
   };
 
   render() {
@@ -22,7 +28,8 @@ export default class Calendar extends React.Component {
         <div className="demo-app-top">
           <button onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
           <button onClick={this.gotoPast}>go to a date in the past</button>
-          &nbsp; (also, click a date/time to add an event)
+          <button onClick={this.openModal}>Schedule</button>
+          {this.state.isModalOpen && <ModalComponent />}
         </div>
         <div className="demo-app-calendar">
           <FullCalendar
@@ -36,7 +43,6 @@ export default class Calendar extends React.Component {
             ref={this.calendarComponentRef}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
-            dateClick={this.handleDateClick}
           />
         </div>
       </div>
@@ -53,19 +59,5 @@ export default class Calendar extends React.Component {
   gotoPast = () => {
     let calendarApi = this.calendarComponentRef.current.getApi();
     calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
-  };
-
-  handleDateClick = arg => {
-    if ('Would you like to add an event to ' + arg.dateStr + ' ?') {
-      this.setState({
-        // add new event data
-        calendarEvents: this.state.calendarEvents.concat({
-          // creates a new array
-          title: 'New Event',
-          start: arg.date,
-          allDay: arg.allDay,
-        }),
-      });
-    }
   };
 }
