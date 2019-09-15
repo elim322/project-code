@@ -40,11 +40,39 @@ class VolunteerCancel extends React.Component {
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
           <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+            <section className="card-content">
+              <div>
+                <label for="userEmail">Start of Session</label>
+                <br></br>
+                <input name="userEmail" id="userEmail" type="text"></input>
+              </div>
+              <div>
+                <label for="userPass">End of Session</label>
+                <br></br>
+                <input name="userPass" id="userPass" type="text"></input>
+              </div>
+              <div>
+                <label for="userPassConfirm">Location</label>
+                <br></br>
+                <input
+                  name="userPassConfirm"
+                  id="userPassConfirm"
+                  type="text"
+                ></input>
+              </div>
+              <div>
+                <label for="userPassConfirm">Contact</label>
+                <br></br>
+                <input
+                  name="userPassConfirm"
+                  id="userPassConfirm"
+                  type="text"
+                ></input>
+              </div>
+              <ul className="info">
+                <li>Contact your tutor for exact meeting location.</li>
+              </ul>
+            </section>
           </form>
         </Modal>
       </div>
