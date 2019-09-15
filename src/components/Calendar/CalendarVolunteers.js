@@ -3,11 +3,11 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
-import ModalComponent from './Modal';
+// import ModalComponent from './Modal';
 
 import '../scss/styles.scss';
 
-export default class Calendar extends React.Component {
+export default class CalendarVolunteers extends React.Component {
   calendarComponentRef = React.createRef();
   state = {
     isModalOpen: false,
@@ -18,9 +18,9 @@ export default class Calendar extends React.Component {
     ],
   };
 
-  openModal = () => {
-    this.setState({ isModalOpen: true });
-  };
+  // openModal = () => {
+  //   this.setState({ isModalOpen: true });
+  // };
 
   render() {
     return (
@@ -28,16 +28,14 @@ export default class Calendar extends React.Component {
         <div className="demo-app-top">
           <button onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
           <button onClick={this.gotoPast}>go to a date in the past</button>
-          <button onClick={this.openModal}>Schedule</button>
-          {this.state.isModalOpen && <ModalComponent />}
         </div>
         <div className="demo-app-calendar">
           <FullCalendar
-            defaultView="dayGridMonth"
+            defaultView="dayGridWeek"
             header={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
+              right: 'null',
             }}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             ref={this.calendarComponentRef}

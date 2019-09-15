@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Signup from './components/Signup';
 import ProfileSetup from './components/ProfileSetup';
 import SignupVolunteer from './components/SignupVolunteer';
-import Calendar from './components/Calendar';
+import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
 import { HttpLink } from 'apollo-link-http';
@@ -12,7 +12,6 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import 'tachyons';
 import './index.css';
-
 
 // __SIMPLE_API_ENDPOINT__ looks like: 'https://api.graph.cool/simple/v1/__SERVICE_ID__'
 const httpLink = new HttpLink({
@@ -24,18 +23,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-ReactDOM.render(  <ApolloProvider client={client}>
+ReactDOM.render(
+  <ApolloProvider client={client}>
     <Router>
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/signup" component={Signup} />
-        <Route exact path='/profile-setup' component={ProfileSetup} />
-        <Route exact path='/signup-volunteer' component={SignupVolunteer} />
-        <Route exact path="/calendar" component={Calendar} />
-
+        <Route exact path="/profile-setup" component={ProfileSetup} />
+        <Route exact path="/signup-volunteer" component={SignupVolunteer} />
+        <Route exact path="/calendar" component={Dashboard} />
       </div>
     </Router>
   </ApolloProvider>,
   document.getElementById('root'),
 );
-
