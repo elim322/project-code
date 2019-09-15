@@ -11,18 +11,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    return (
-      // <div>
-      //   {
-      //     (this.state.parent = true ? (
-      //       <CalendarParents />
-      //     ) : (
-      //       <CalendarVolunteers />
-      //     ))
-      //   }
-      // </div>
-      <CalendarParents />
-    );
+    return <CalendarParents />;
   }
 }
 
