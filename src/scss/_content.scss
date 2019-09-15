@@ -143,6 +143,12 @@ hr {
 	height: 7rem;
 	background: $color-smoke;
 	border-radius: 50%;
+
+	.profile-pic {
+		min-height: 100%;
+		width: auto;
+		border-radius: 50%;
+	}
 }
 input[id^="imageUpload"] {
 	grid-row-start: 1;

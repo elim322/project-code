@@ -37,11 +37,11 @@ class Home extends React.Component {
                                     <h2>Sign in</h2>
                                     <div>
                                         <label for="userEmail">Email</label><br></br>
-                                        <input name="userEmail" id="userEmail" type="email"></input>
+                                        <input name="userEmail" id="userEmail" type="email" value="alex@email.com"></input>
                                     </div>
                                     <div>
                                         <label for="userPass">Password</label><br></br>
-                                        <input name="userPass" id="userPass"type="password"></input>
+                                        <input name="userPass" id="userPass"type="password" value="12345678"></input>
                                     </div>
                                     <Link className="link-minor" to={`/dashboard?v=true`}>
                                         <input className="btn-primary" name="userSubmit" id="userSubmit" type="submit" value="Sign In"></input>

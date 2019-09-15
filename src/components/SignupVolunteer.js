@@ -29,7 +29,6 @@ class SignupVolunteer extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        {/* User selected (independent) Learner */}
                         <form action="" method="get" id="form-signup-volunteer">
                             <div className="namecard">
                                 <div className="card-punchhole"></div>
@@ -42,37 +41,37 @@ class SignupVolunteer extends React.Component {
                                         <input id="imageUploadVolunteer" type="file" name="imageUploadVolunteer" placeholder="Photo" capture></input>
                                         <div className="profile-name">
                                             <label for="userName">Full Name</label><br></br>
-                                            <input name="userName" id="userName" type="text"></input><br></br>
+                                            <input name="userName" id="userName" type="text" value="Alex Nuss"></input><br></br>
                                             <span class="text-minor">A profile picture will help your students easily identify you.</span>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="userEmail">Email</label><br></br>
-                                        <input name="userEmail" id="userEmail" type="email"></input>
+                                        <input name="userEmail" id="userEmail" type="email" value="alex@email.com"></input>
                                     </div>
                                     <div>
                                         <label for="userPass">Password</label><br></br>
-                                        <input name="userPass" id="userPass" type="password"></input>
+                                        <input name="userPass" id="userPass" type="password" value="12345678"></input>
                                     </div>
                                     <div>
                                         <label for="userPassConfirm">Confirm Password</label><br></br>
-                                        <input name="userPassConfirm" id="userPassConfirm" type="password"></input>
+                                        <input name="userPassConfirm" id="userPassConfirm" type="password" value="12345678"></input>
                                     </div>
                                     <hr></hr>
                                     <h2>Additional Info</h2>
                                     <div>
                                         <label for="userTel">Phone Number</label><br></br>
-                                        <input name="userTel" id="userTel" type="tel"></input>
+                                        <input name="userTel" id="userTel" type="tel" value="604-123-4567"></input>
                                     </div>
                                     <div>
                                         <label for="userAge">Age</label><br></br>
-                                        <input name="userAge" id="userAge" type="number"></input>
+                                        <input name="userAge" id="userAge" type="number" value="23"></input>
                                     </div>
                                     <div>
                                         <p>I prefer to be contacted via:</p>
                                         <input type="checkbox" id="email" name="contactPref"></input>
                                         <label for="email">Email</label>
-                                        <input type="checkbox" id="sms" name="contactPref"></input>
+                                        <input type="checkbox" id="sms" name="contactPref" checked></input>
                                         <label for="sms">SMS text</label>
                                         <input type="checkbox" id="call" name="contactPref"></input>
                                         <label for="call">Phone call</label>
@@ -80,17 +79,17 @@ class SignupVolunteer extends React.Component {
                                     
                                     <div>
                                         <label for="locationPref">Preferred Locations</label><br></br>
-                                        <input name="locationPref" id="locationPref" type="text"></input>
+                                        <input name="locationPref" id="locationPref" type="text" value="Vancouver, Coquitlam"></input>
                                     </div>
                                     <div>
                                         <label for="accSkills">Accessibility Skills</label><br></br>
-                                        <input name="accSkills" id="accSkills" type="text"></input>
+                                        <input name="accSkills" id="accSkills" type="text" value="Autism, ADHD"></input>
                                     </div>
                                     <div>
                                         <p>What do you like to teach?</p>
-                                        <input type="checkbox" id="scratch" name="teachPref"></input>
+                                        <input type="checkbox" id="scratch" name="teachPref" checked></input>
                                         <label for="scratch">Scratch</label><br></br>
-                                        <input type="checkbox" id="scratchAdv" name="teachPref"></input>
+                                        <input type="checkbox" id="scratchAdv" name="teachPref" checked></input>
                                         <label for="scratchAdv">Scratch Advanced</label><br></br>
                                         <input type="checkbox" id="python" name="teachPref"></input>
                                         <label for="python">Python</label>
