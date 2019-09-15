@@ -3,9 +3,9 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
-import LearnerDetails from '../Modal/LearnerDetailsModal';
+// import ModalComponent from './Modal';
 
-import '../../scss/styles.scss';
+import '../scss/styles.scss';
 
 export default class CalendarParents extends React.Component {
   calendarComponentRef = React.createRef();
@@ -14,26 +14,23 @@ export default class CalendarParents extends React.Component {
     calendarWeekends: true,
     calendarEvents: [
       // initial event data
-      { title: 'Today', start: new Date() },
+      { title: 'Event Now', start: new Date() },
     ],
   };
 
-  openModal = () => {
-    this.setState({ isModalOpen: true });
-  };
+  // openModal = () => {
+  //   this.setState({ isModalOpen: true });
+  // };
 
   render() {
     return (
       <div className="demo-app">
         <div className="demo-app-top">
-          <button className="schedule-button" onClick={this.openModal}>
-            Schedule
-          </button>
+          <button onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
+          <button onClick={this.gotoPast}>go to a date in the past</button>
         </div>
-        {this.state.isModalOpen && <LearnerDetails />}
-        <div>
+        <div className="demo-app-calendar">
           <FullCalendar
-            className="calendar"
             defaultView="dayGridWeek"
             header={{
               left: 'prev,next today',
