@@ -70,19 +70,20 @@ class Home extends React.Component {
                         <div className="namecard">
                             <div className="card-punchhole"></div>
                             <section className="card-content">
-                                <h2>Sign in</h2>
-                                
-                                <div>
-                                    <label>Email</label><br></br>
-                                    <input type="email"></input>
-                                </div>
-                                <div>
-                                    <label>Password</label><br></br>
-                                    <input type="password"></input>
-                                </div>
-                                <input className="btn-primary" type="submit" value="Sign In"></input>
+                                <form action="" method="get" className="form-signin">
+                                    <h2>Sign in</h2>
+                                    <div>
+                                        <label>Email</label><br></br>
+                                        <input type="email"></input>
+                                    </div>
+                                    <div>
+                                        <label>Password</label><br></br>
+                                        <input type="password"></input>
+                                    </div>
+                                    <input className="btn-primary" type="submit" value="Sign In"></input>
 
-                                <p><a className="link-minor" href="#">Sign up with Email</a></p>
+                                    <p><a className="link-minor" href="#">Sign up with Email</a></p>
+                                </form>
                             </section>
                         </div>
                     </div>
