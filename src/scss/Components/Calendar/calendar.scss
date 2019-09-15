@@ -1,3 +1,10 @@
+// imports
 @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/timegrid/main.css';
 @import '~@fullcalendar/daygrid/main.css';
+@import './calendar-parents.scss';
+@import './calendar-volunteers.scss';
+
+.calendar {
+  z-index: -99;
+}
