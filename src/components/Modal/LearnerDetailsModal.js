@@ -66,7 +66,7 @@ class LearnerDetails extends React.Component {
                   name="userPassConfirm"
                   id="userPassConfirm"
                   type="text"
-                  value={this.props.info.title}
+                  value="Vancouver, BC"
                 ></input>
               </div>
               <div>
@@ -76,7 +76,12 @@ class LearnerDetails extends React.Component {
                   name="userPassConfirm"
                   id="userPassConfirm"
                   type="text"
-                  value={this.props.info.volunteer}
+                  value="1234567890"
+                ></input>
+                <input
+                  className="btn-primary"
+                  type="submit"
+                  value="Register"
                 ></input>
               </div>
               <ul className="info">
