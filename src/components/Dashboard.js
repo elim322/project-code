@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
 import CalendarParents from './Calendar/CalendarParents';
-// import CalendarVolunteers from './Calendar/CalendarVolunteers';
+import CalendarVolunteers from "./Calendar/CalendarVolunteers";
 
 class Dashboard extends Component {
+
   constructor(props) {
     super(props);
-    this.state = {
-      parent: false,
-    };
   }
 
   render() {
-    return (
-      // <div>
-      //   {
-      //     (this.state.parent = true ? (
-      //       <CalendarParents />
-      //     ) : (
-      //       <CalendarVolunteers />
-      //     ))
-      //   }
-      // </div>
-      <CalendarParents />
-    );
+    let search = window.location.search;
+    let params = new URLSearchParams(search);
+    let volunteer = params.get('v');
+
+    if (volunteer) {
+      return (
+          <CalendarVolunteers/>
+      )
+    } else {
+      return (
+          <CalendarParents/>
+      )
+    }
   }
 }
 

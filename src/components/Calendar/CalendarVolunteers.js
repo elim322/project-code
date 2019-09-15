@@ -5,7 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 // import ModalComponent from './Modal';
 
-import '../scss/styles.scss';
+import '../../scss/styles.scss';
 
 export default class CalendarVolunteers extends React.Component {
   calendarComponentRef = React.createRef();
@@ -41,6 +41,7 @@ export default class CalendarVolunteers extends React.Component {
             ref={this.calendarComponentRef}
             weekends={this.state.calendarWeekends}
             events={this.state.calendarEvents}
+            eventClick={(lol) => {console.log("yay "+lol.event.title)}}
           />
         </div>
       </div>
