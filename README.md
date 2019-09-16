@@ -1,68 +1,116 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project C.O.D.E
 
-## Available Scripts
+## About the C.O.D.E initiative
+- Serving differently-abled students of ages 8-18
+- Complementing to traditional learning environment
+- Equipping students with highly sought-after skills
 
-In the project directory, you can run:
+## Project Goal
+**To responsive web app for parents and volunteers to arrange learning sessions.**
 
-### `npm start`
+## Technologies used
+- React for a highly-customizable frontend
+    - Fullcalendar.js is a powerful calendar UI component that allows us to display and interact with events using a calendar on our dashboard
+- GraphQL & Apollo for querying the backend
+- Graphcool for the backend databases
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What we achieved
+- UI designs for both desktop and mobile web apps
+- A backend schema in Graphcool (uses GraphQL data structures)
+- The basic React app with user flows for Volunteers and Parents/Learners
+- Calendar component integration
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## What's coming next?
+- Full backend integration
+- Several updates to the UI, including a responsive calendar view
+- Authentication using Facebook or Google sign-in
+- Deploying it to a webserver
 
-### `npm test`
+## GraphQL Database Schema
+```
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+type User @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  type: String!
+  parent: Parent @relation(name: "ParentRole")
+  learner: Learner @relation(name: "LearnerRole")
+  volunteer: Volunteer @relation(name: "VolunteerRole")
+  updatedAt: DateTime!
+  email: String!
+  password: String!
+}
 
-### `npm run build`
+type Parent @model {
+  id: ID! @isUnique
+  learner: [Learner!]! @relation(name: "Children")
+  user: User @relation(name: "ParentRole")
+  name: String!
+  phone: Int!
+  prefContact: String!
+}
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+type Learner @model {
+  id: ID! @isUnique
+  parent: Parent @relation(name: "Children")
+  user: User @relation(name: "LearnerRole")
+  booking: [Bookings!]! @relation(name: "LearnerBooking")
+  name: String!
+  age: Int!
+  city: City! @relation(name: "LearnerLocation")
+  accessibilityNeeds: String!
+}
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+type Volunteer @model {
+  id: ID! @isUnique
+  user: User @relation(name: "VolunteerRole")
+  event: [Events!]! @relation(name: "VolunteerBooking")
+  name: String!
+  city: City! @relation(name: "Location")
+  phone: Int!
+  skills: String!
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+type Events @model {
+  id: ID! @isUnique
+  startTime: String!
+  endTime: String!
+  booking: Bookings @relation(name: "Bookings")
+  volunteer: Volunteer @relation(name: "VolunteerBooking")
+  createdAt: DateTime!
+  city: City! @relation(name: "EventLocation")
+}
 
-### `npm run eject`
+type Bookings @model {
+  id: ID! @isUnique
+  event: Events @relation(name: "Bookings")
+  learner: Learner @relation(name: "LearnerBooking")
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+type City @model {
+  id: ID! @isUnique
+  name: String! @isUnique
+  colour: String! @isUnique
+  volunteers: [Volunteer!]! @relation(name: "Location")
+  events: [Events!]! @relation(name: "EventLocation")
+  learners: [Learner!]! @relation(name: "LearnerLocation")
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Contributors
+- Timothy Chan
+- Einer Lim
+- Anita Sun
+- Gilbert Fung
+- Aditya Chinchure
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
